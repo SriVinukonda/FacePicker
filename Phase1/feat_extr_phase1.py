@@ -2,14 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import math
-"""
-This is the Assignment 2 for the course CP467 at Wilfrid Laurier Unviversity
-Authors: Rahul Agarwala, Ravish Virani, Haricharan Vinukonda
-"""
 
-"""
-ASSUMPTIONS: We assume that the signs are completely black in color
-"""
 
 def process_image(imagename):
     assert type(imagename) == str
@@ -27,4 +20,4 @@ def process_image(imagename):
     
 
 
-process_image("./sample4.jpg")
+process_image("../../OpenFace/")
