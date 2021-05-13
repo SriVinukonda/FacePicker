@@ -1,3 +1,4 @@
+from os import read
 import cv2
 import csv
 import numpy as np
@@ -16,7 +17,11 @@ def process_image(csv_name,imagename):
         reader = csv.DictReader(csvfile, delimiter=' ', quotechar='|')
 
         for row in reader:
-            print('-'.join(row))
+            
+            x_min = int((row["x_17,"]).split(".")[0])
+            x_max = math.ceil(float(row["x_21,"].strip(",")))
+            y_min = int(row["y_17,"].split(".")[0])
+            y_max = math.ceil(float(row["y_29,"].strip(",")))
     assert type(imagename) == str
 
     #Read image and convert it to grayscale
@@ -25,8 +30,8 @@ def process_image(csv_name,imagename):
     
 
     
-
-    plt.imshow(image[193:279,218:332])
+    #                Y-, Y+ : X-, X+
+    plt.imshow(image[y_min:y_max,x_min:x_max])
     plt.show()
 
     
