@@ -31,7 +31,8 @@ def process_image(csv_name,imagename):
         reader = csv.DictReader(csvfile, delimiter=' ', quotechar='|')
 
         for row in reader:
-            
+            # Just the left eye won't be enough for MHW, I'll need to extract
+            # from the top-left of the left eye to the bottom-right of the right eye   
             eye_left_x = int((row["x_17,"]).split(".")[0])
             eye_right_x = math.ceil(float(row["x_27,"].strip(",")))
             eye_top_y = (int(row["y_20,"].split(".")[0])+int(row["y_38,"].split(".")[0]))//2
