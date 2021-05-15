@@ -61,7 +61,7 @@ def process_image(csv_name,imagename):
     for each in feature_list:
         #                Y-, Y+ : X-, X+
         # plt.imshow(image[each[2]:each[3],each[0]:each[1]])
-        cv2.imwrite("./feature{}.jpg".format(i),image[each[2]:each[3],each[0]:each[1]])
+        cv2.imwrite("./feature{}.jpg".format(i),cv2.cvtColor(image[each[2]:each[3],each[0]:each[1]],cv2.COLOR_BGR2GRAY))
         i+=1
         # plt.show()
     
