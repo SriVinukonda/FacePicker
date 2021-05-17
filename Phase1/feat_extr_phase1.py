@@ -38,6 +38,7 @@ def process_image(csv_name,imagename):
             # eye_top_y = (int(row["y_20,"].split(".")[0])+int(row["y_38,"].split(".")[0]))//2
             # eye_bot_y = math.ceil(float(row["y_29,"].strip(",")))
             # feature_list.append([eye_left_x,eye_right_x,eye_top_y,eye_bot_y])
+            
             eye_left_x = int((row["x_17,"]).split(".")[0])
             eye_right_x = math.ceil(float(row["x_26,"].strip(",")))
             eye_top_y = (int(row["y_19,"].split(".")[0]))
